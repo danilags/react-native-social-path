@@ -25,6 +25,8 @@ import {
   Input,
   Fab} from 'native-base';
 
+import MapView from 'react-native-maps';
+
 class FooterPath extends React.Component {
   constructor() {
     super()

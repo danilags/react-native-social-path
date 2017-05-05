@@ -4,7 +4,8 @@ import {
   AppRegistry,
   StyleSheet,
   View,
-  Image
+  Image,
+  Dimensions
 } from 'react-native';
 
 import {
@@ -32,7 +33,10 @@ import {
 import HeaderPath from './Header'
 import SearchPath from './Search'
 import FooterPath from './Footer'
+import MapsPath from './Maps'
+import ContentHome from './ContentHome'
 
+import MapView from 'react-native-maps';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,41 +52,21 @@ class App extends React.Component {
           <SearchPath />
         </View>
 
-        <Content>
-          <Card style={{ flex: 1 }}>
-            <CardItem>
-              <Left>
-                <Thumbnail
-                  style={{ width: 50, height: 50 }}
-                  source={{ uri : 'https://scontent-sit4-1.cdninstagram.com/t51.2885-19/s150x150/15877059_1462723210434512_6530061937466671104_a.jpg'}} />
-              </Left>
-            </CardItem>
-          </Card>
-          <Card>
-            <View style={styles.timeline}>
-              <View style={styles.childone}>
-                <Image
-                  style={{ width: 50, height: 50 }}
-                  source={{ uri : 'https://scontent-sit4-1.cdninstagram.com/t51.2885-19/s150x150/18160845_426616457705615_1589827593958326272_a.jpg'}} />
-              </View>
-              <View style={styles.childtwo}>
-                <CardItem header>
-                  <Icon name="navigate" />
-                   <Body>
-                     <Text>At Hacktiv8 Indonesia</Text>
-                     <Text note>University</Text>
-                   </Body>
-                </CardItem>
-                <Thumbnail
-                   square size={80}
-                  style={{ width: 200, height: 200 }}
-                  source={{ uri: 'https://media.istockphoto.com/photos/egg-benedict-toast-english-breakfast-plate-concept-picture-id483281364' }}/>
-              </View>
-            </View>
-          </Card>
-        </Content>
+        <ContentHome />
 
         <FooterPath />
+        <View style={styles.container2}>
+        <MapView
+           style={styles.map}
+           initialRegion={{
+             latitude: -6.260507,
+             longitude: 106.781495,
+             latitudeDelta: 0.0922,
+             longitudeDelta: 0.0421,
+           }}
+           showsUserLocation={true}
+          />
+        </View>
       </Container>
     )
   }
@@ -106,7 +90,23 @@ const styles = StyleSheet.create({
   childtwo: {
     flex: 2,
     alignItems: 'flex-start'
+  },
+  container2: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    // position: 'absolute',
+  },
+  map: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
   }
 });
+
 
 export default App;
