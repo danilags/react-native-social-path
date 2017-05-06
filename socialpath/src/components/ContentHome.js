@@ -31,8 +31,8 @@ import {
 
 
 class ContentHome extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
   }
 
@@ -59,8 +59,8 @@ class ContentHome extends React.Component {
               <CardItem header>
                 <Icon name="navigate" />
                  <Body>
-                   <Text>At Hacktiv8 Indonesia</Text>
-                   <Text note>University</Text>
+                   <Text>At {this.props.location}</Text>
+                   <Text note>{this.props.typelocation}</Text>
                  </Body>
               </CardItem>
               <Thumbnail

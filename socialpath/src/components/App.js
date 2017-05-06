@@ -136,12 +136,6 @@ class App extends React.Component {
     };
   }
 
-  cobaMethod() {
-    return {
-      name : ''
-    }
-  }
-
   onRegionChange(lastPosition) {
     this.setState(lastPosition );
   }
