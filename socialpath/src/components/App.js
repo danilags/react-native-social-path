@@ -5,7 +5,8 @@ import {
   StyleSheet,
   View,
   Image,
-  Dimensions
+  Dimensions,
+  TouchableHighlight
 } from 'react-native';
 
 import {
@@ -44,6 +45,10 @@ class App extends React.Component {
 
   }
 
+  static navigationOptions = {
+    header: null
+  };
+
   render() {
     return (
       <Container>
@@ -54,7 +59,7 @@ class App extends React.Component {
 
         <ContentHome />
 
-        <FooterPath />
+        <FooterPath navigation={this.props.navigation} />
         <View style={styles.container2}>
         <MapView
            style={styles.map}

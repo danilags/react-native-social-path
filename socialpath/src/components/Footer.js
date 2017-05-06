@@ -28,8 +28,8 @@ import {
 import MapView from 'react-native-maps';
 
 class FooterPath extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
         active: 'true'
     };
@@ -45,7 +45,9 @@ class FooterPath extends React.Component {
               <Icon name="paper-plane" />
               <Text>Timeline</Text>
             </Button>
-            <Button >
+            <Button
+              onPress={() => this.props.navigation.navigate('Camera')}
+              >
               <Icon
                 name="camera"
               />

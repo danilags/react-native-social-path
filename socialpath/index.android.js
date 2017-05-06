@@ -12,12 +12,12 @@ import {
   View
 } from 'react-native';
 
-import App from './src/components/App.js'
+import PathApp from './src/components/Index.js'
 
 export default class socialpath extends Component {
   render() {
     return (
-      <App />
+      <PathApp />
     );
   }
 }
