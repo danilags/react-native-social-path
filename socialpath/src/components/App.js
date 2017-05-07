@@ -144,7 +144,9 @@ class App extends React.Component {
     return (
       <Container>
         <View>
-          <HeaderPath />
+          <HeaderPath
+            login={this.props.navigation}
+          />
           <SearchPath />
         </View>
 

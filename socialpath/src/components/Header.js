@@ -24,32 +24,42 @@ import {
   Item,
   Input } from 'native-base';
 
-  const HeaderPath = () => {
-      return (
-        <View>
-          <Header style={{ backgroundColor: '#e52f17' }}>
-            <Left>
-              <Button transparent>
-                <Icon name='star'
-                  style={{ color: '#f8fdfd', fontSize: 22 }}
-                />
-              </Button>
-            </Left>
-            <Body>
-              <Title
-                style={{ color: '#fff', fontSize: 24 }}
-              >Path</Title>
-            </Body>
-            <Right>
-              <Button transparent>
-                <Icon name='grid'
-                  style={{ color: '#f8fdfd', fontSize: 22 }}
-                />
-              </Button>
-            </Right>
-          </Header>
-        </View>
-      )
+class HeaderPath extends React.Component {
+  constructor(props) {
+    super(props)
+
   }
 
-  export default HeaderPath;
+  render () {
+    return (
+      <View>
+        <Header style={{ backgroundColor: '#e52f17' }}>
+          <Left>
+            <Button transparent>
+              <Icon name='star'
+                style={{ color: '#f8fdfd', fontSize: 22 }}
+              />
+            </Button>
+          </Left>
+          <Body>
+            <Title
+              style={{ color: '#fff', fontSize: 24 }}
+            >Path</Title>
+          </Body>
+          <Right>
+            <Button
+              onPress={() => this.props.login.navigate('Login')}
+              transparent
+              >
+              <Icon name='grid'
+                style={{ color: '#f8fdfd', fontSize: 22 }}
+              />
+            </Button>
+          </Right>
+        </Header>
+      </View>
+    )
+  }
+}
+
+export default HeaderPath;

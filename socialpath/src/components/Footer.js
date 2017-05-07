@@ -37,7 +37,7 @@ class FooterPath extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: '#ccc'}}>
         <Footer>
           <FooterTab>
             <Button badge vertical>
