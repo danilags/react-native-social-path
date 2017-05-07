@@ -40,7 +40,9 @@ class FooterPath extends React.Component {
       <View style={{ backgroundColor: '#ccc'}}>
         <Footer>
           <FooterTab>
-            <Button badge vertical>
+            <Button badge vertical
+                onPress={() => this.props.navigation.navigate('ReadNews')}
+              >
               <Badge><Text>2</Text></Badge>
               <Icon name="paper-plane" />
               <Text>Timeline</Text>
@@ -53,7 +55,9 @@ class FooterPath extends React.Component {
               />
               <Text>Camera</Text>
             </Button>
-            <Button>
+            <Button
+              onPress={() => this.props.navigation.navigate('Main')}
+              >
               <Icon name="navigate" />
               <Text>Location</Text>
             </Button>

@@ -12,11 +12,12 @@ import { StackNavigator } from 'react-navigation'
 import App from './App';
 import CameraApp from './Camera';
 import LoginPage from './LoginUser/Index.js';
+import ReadNews from './NewsTimeline';
 
 const PathApp = StackNavigator({
   Main: {screen: App},
   Camera: {screen: CameraApp},
-  Login: {screen: LoginPage}
+  ReadNews: {screen: ReadNews}
 })
 
 export default PathApp;

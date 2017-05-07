@@ -27,7 +27,7 @@ import {
   Item,
   Input,
   Card,
-  CardItem } from 'native-base';
+  CardItem, Spinner } from 'native-base';
 
 
 class ContentHome extends React.Component {
@@ -59,8 +59,15 @@ class ContentHome extends React.Component {
               <CardItem header>
                 <Icon name="navigate" />
                  <Body>
-                   <Text>At {this.props.location}</Text>
-                   <Text note>{this.props.typelocation}</Text>
+                  <Content>
+                    { !(this.props.location && this.props.typelocation) ? <Spinner
+                      color='red'/> :
+                      <View>
+                        <Text>At {this.props.location}</Text>
+                        <Text note>{this.props.typelocation}</Text>
+                      </View>
+                    }
+                  </Content>
                  </Body>
               </CardItem>
               <Thumbnail

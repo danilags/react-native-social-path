@@ -113,5 +113,5 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
-
-export default LoginPage
+// 38ad236884974c379b8fda98079c28bc
+export default LoginPage;

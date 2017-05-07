@@ -29,7 +29,7 @@ import {
   Item,
   Input,
   Card,
-  CardItem } from 'native-base';
+  CardItem, Spinner } from 'native-base';
 
 import HeaderPath from './Header'
 import SearchPath from './Search'
@@ -154,30 +154,30 @@ class App extends React.Component {
 
         <FooterPath navigation={this.props.navigation} />
         <View style={styles.container2}>
-        <MapView
-          style={styles.map}
-          region={this.state.region}
-          onRegionChange={this.onRegionChange.bind(this)}
-          showsUserLocation={true}
-          loadingEnabled={true}
-        >
-          {this.state.markers.map((marker, index) => (
-            <MapView.Marker
-              key={index}
-              coordinate={marker.location}
-              title={marker.name}
-              onPress={() => this.setState({
-                cekinlocation: marker.name,
-                typelocation: marker.type
-              })}
-              >
-                <MapView.Callout>
+          <MapView
+            style={styles.map}
+            region={this.state.region}
+            onRegionChange={this.onRegionChange.bind(this)}
+            showsUserLocation={true}
+            loadingEnabled={true}
+          >
+            {this.state.markers.map((marker, index) => (
+              <MapView.Marker
+                key={index}
+                coordinate={marker.location}
+                title={marker.name}
+                onPress={() => this.setState({
+                  cekinlocation: marker.name,
+                  typelocation: marker.type
+                })}
+                >
+                  <MapView.Callout>
 
-                </MapView.Callout>
-              </MapView.Marker>
-          ))}
+                  </MapView.Callout>
+                </MapView.Marker>
+            ))}
 
-        </MapView>
+          </MapView>
         </View>
       </Container>
     )

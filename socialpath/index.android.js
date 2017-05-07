@@ -12,12 +12,17 @@ import {
   View
 } from 'react-native';
 
-import PathApp from './src/components/Index.js'
+import { Provider } from 'react-redux';
+
+import store from './src/store';
+import PathApp from './src/components/Index.js';
 
 export default class socialpath extends Component {
   render() {
     return (
-      <PathApp />
+      <Provider store={store}>
+        <PathApp />
+      </Provider>
     );
   }
 }
