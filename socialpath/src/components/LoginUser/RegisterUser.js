@@ -18,14 +18,14 @@ import {
 
 import FooterPath from '../Footer.js';
 
-class LoginPage extends React.Component {
+class RegisterUser extends React.Component {
   constructor(props) {
     super(props)
 
   }
 
   static navigationOptions = {
-    headerTitle: 'SignIn',
+    headerTitle: 'SignUp',
     headerTintColor: '#F44336'
   };
 
@@ -41,7 +41,7 @@ class LoginPage extends React.Component {
 
         <Image
           style={styles.backgroundImage}
-          source={{ uri : 'https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/YDSEFFR6P3.jpg' }}
+          source={{ uri : 'https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/KE0UHIGVOQ.jpg' }}
 
         >
           <View
@@ -53,8 +53,19 @@ class LoginPage extends React.Component {
             <H1 style={{
               textAlign: 'center',
               color: '#F44336'
-            }}>Welcome</H1>
+            }}>Feel Free to Signup</H1>
               <Form>
+                <Item
+                  floatingLabel
+                  style={styles.inputan}
+                  >
+                  <Label
+                    style={{color: '#F44336'}}
+                    >Email</Label>
+                  <Input
+                    style={{color: '#F44336'}}
+                  />
+                </Item>
                 <Item
 
                   floatingLabel
@@ -82,16 +93,7 @@ class LoginPage extends React.Component {
                 >
                 <Text
                   style={{color: '#fff'}}
-                  >SignIn</Text>
-              </Button>
-              <Button
-                full rounded danger
-                style={{ marginTop: 20}}
-                onPress={() => this.props.navigation.navigate('Register')}
-                >
-                <Text
-                  style={{color: '#fff'}}
-                  >Create Account</Text>
+                  >Submit</Text>
               </Button>
           </View>
         </Image>
@@ -115,4 +117,4 @@ const styles = StyleSheet.create({
   }
 });
 // 38ad236884974c379b8fda98079c28bc
-export default LoginPage;
+export default RegisterUser;

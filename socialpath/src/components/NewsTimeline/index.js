@@ -49,7 +49,7 @@ class ReadNews extends React.Component {
         }}
       >
         <ScrollView>
-          { this.props.news.length == 0 ? <Spinner color={red} /> :
+          { this.props.news.length == 0 ? <Spinner color='red' /> :
             <View>
               <Image
                 style={{ width: '100%', height: 200}}
@@ -67,7 +67,7 @@ class ReadNews extends React.Component {
             </View>
           }
 
-          { this.props.news.length == 0 ? <Spinner color={red}/> :
+          { this.props.news.length == 0 ? <Spinner color='red'/> :
 
             this.props.news.map((data, index) =>(
               index !== 1 && <View key={index}>
